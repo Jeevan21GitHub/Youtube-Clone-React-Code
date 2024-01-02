@@ -22,4 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.env
+# secret
+*.env
+*.env.example
+*.env.local
+*.env.staging
