@@ -9,7 +9,7 @@ import { auth } from '../firebase'
 import CategoryBar from '../components/CategoryBar'
 
 import VideoCard from '../components/VideoCard'
-import VideoHome from '../components/VideoHome'
+// import VideoHome from '../components/VideoHome'
 import { BASE_URL } from '../utils/fetchFromAPI'
 import { API } from '../utils/fetchFromAPI'
 import VideoCardLoading from '../components/VideoCardLoading'
@@ -53,7 +53,7 @@ const Home = ({sideBarHidden,selectedCategory,setSelectedCategory}) => {
     onAuthStateChanged(auth, (user) => {
       user ? dispatch(setUser(user)) : dispatch(setUser(null));
     })
-  }, [])
+  }, [dispatch])
   console.log(videos);
   return (
     <>

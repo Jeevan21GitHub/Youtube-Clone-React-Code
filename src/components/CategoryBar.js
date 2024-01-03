@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { CategoryItems } from '../static/data'
-import { SideBarItems } from '../static/data'
+// import { SideBarItems } from '../static/data'
 const CategoryBar = ({setSelectedCategory}) => {
     const [active, setActive] = useState('All');
     return (

@@ -11,7 +11,7 @@ import { setUser,getUser,logOut } from '../slices/userSlice';
 
 const NavBar = ({setSideBarHidden,setSelectedCategory}) => {
     const [searchBox,setSearchBox]=useState('');
-    const [searchActice,setSearchActive]=useState(false);
+    // const [searchActice,setSearchActive]=useState(false);
     //console.log(searchBox);
     const dispatch=useDispatch();
     const user=useSelector(getUser);

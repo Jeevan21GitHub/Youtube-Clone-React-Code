@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import { SideBarItems } from '../static/data'
 import "./SideBar.css"
 // h-[calc(100vh-53px)]

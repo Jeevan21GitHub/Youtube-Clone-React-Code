@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import Logo from "../assets/yt-logo-white.png"
+// import React, { useEffect, useState } from 'react'
+// import Logo from "../assets/yt-logo-white.png"
 // import { BASE_URL } from '../utils/fetchFromAPI';
 // import { API } from '../utils/fetchFromAPI';
 
