@@ -4,7 +4,7 @@ import { BASE_URL,API } from '../utils/fetchFromAPI';
 const RelatedVideoCard = () => {
     const [relatedVideo, setRelatedVideo] = useState([]);
     useEffect(() => {
-        fetch(`${BASE_URL}/search?key=${API}&part=snippet&maxResults=20&q=${relatedVideo}`)
+        fetch(`${BASE_URL}/search?key=${API}&part=snippet&maxResults=20&q=thalapathy`)
             .then((response) => response.json())
             .then((resJson) => {
                 if (resJson.items) {
