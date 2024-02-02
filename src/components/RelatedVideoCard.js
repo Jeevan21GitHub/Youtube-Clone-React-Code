@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { BASE_URL,API } from '../utils/fetchFromAPI';
 
-const RelatedVideoCard = () => {
+const RelatedVideoCard = ({id}) => {
     const [relatedVideo, setRelatedVideo] = useState([]);
     useEffect(() => {
-        fetch(`${BASE_URL}/search?key=${API}&part=snippet&maxResults=20&q=thalapathy`)
+        fetch(`${BASE_URL}/search?key=${API}&part=snippet&maxResults=20&q=${id}`)
             .then((response) => response.json())
             .then((resJson) => {
                 if (resJson.items) {

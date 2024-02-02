@@ -8,7 +8,7 @@ const VideoHome = ({ id }) => {
         <iframe src={`https://www.youtube.com/embed/${id}`} title="YouTube video player" frameBorder="0" allow="" allowFullScreen className='w-[900px] h-[500px] flex-1'></iframe>
       </div>
       <div className='h-1/3'>
-        <RelatedVideoCard />
+        <RelatedVideoCard id={id} />
       </div>
     </section>
   )
