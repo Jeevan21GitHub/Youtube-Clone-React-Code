@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { CategoryItems } from '../static/data'
 // import { SideBarItems } from '../static/data'
-const CategoryBar = ({setSelectedCategory}) => {
+const CategoryBar = ({setSelectedCategory,sideBarHidden}) => {
     const [active, setActive] = useState('All');
     return (
-        <section className=' fixed top-0 w-full z-10'>
+        <section className={`fixed top-0 w-full ${sideBarHidden?'w-full':'md:w-[calc(100%-240px)]'} z-10`}>
             <div className='bg-black mt-24 md:mt-14 h-8 md:h-10 scroll scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-black overflow-x-scroll whitespace-nowrap scrollbar-hide'>
             <div className='flex text-white'>
                 {

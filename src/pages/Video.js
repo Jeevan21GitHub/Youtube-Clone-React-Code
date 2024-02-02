@@ -1,19 +1,20 @@
 import React from 'react'
+import SideBar from '../components/SideBar'
+import { useParams } from 'react-router-dom'
+import VideoHome from '../components/VideoHome';
 
-const Video = ({ videos }) => {
-  console.log(videos);
+const Video = ({sideBarHidden}) => {
+
+  const {id}=useParams();
 
   return (
     <>
-      <div className=''>
-        {videos.map((item, idx) => (
-          <div key={idx}>
-            <h2>{item.video.title}</h2>
-            <p>{item.video.descriptionSnippet}</p>
-          </div>
-        ))}
+      <div className={`${sideBarHidden?'hidden':'block'}`} >
+        <SideBar/>
       </div>
-
+      <div className=' mt-14'>
+          <VideoHome id={id}/>
+      </div>
     </>
   )
 }

@@ -13,9 +13,13 @@ import { CiTrophy } from "react-icons/ci";
 import { GiDress } from "react-icons/gi";
 import { HiSignal } from "react-icons/hi2";
 
+
 export const SideBarItems = {
-  Top: [
+  Home:[
     { icon: <AiFillHome size={21} />, name: "Home" },
+  ],
+  Top: [
+   
     { icon: <SiYoutubemusic size={21} />, name: "Shorts" },
     { icon: <MdOutlineSubscriptions size={21} />, name: "Subscriptions" },
   ],

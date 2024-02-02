@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-const VideoCardLoading = () => {
+const VideoCardLoading = ({setSideBarHidden}) => {
     const videoCount = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12];
     return (
 
@@ -8,7 +9,9 @@ const VideoCardLoading = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3'>
                 {
                     videoCount.map((item, index) => (
-                        <div key={index} className='h-52 bg-gray-100 rounded-2xl w-80 md:w-64 lg:w-64 mx-auto'>
+                        
+                        <Link to={'/video/123'} key={index} onClick={()=>setSideBarHidden(true)} >
+                            <div  className='h-52 bg-gray-100 rounded-2xl w-80 md:w-64 lg:w-64 mx-auto'>
                             <div className='h-32 bg-gray-300 rounded-t-2xl animate-pulse'>
 
                             </div>
@@ -27,6 +30,7 @@ const VideoCardLoading = () => {
                                 </div>
                             </div>
                         </div>
+                        </Link>
                     ))
                 }
             </div>

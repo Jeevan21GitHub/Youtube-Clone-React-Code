@@ -1,20 +1,20 @@
-import React from 'react'
-// import VideoCard from './VideoCard'
+import React, { useState, useEffect } from 'react'
 
-const VideoHome = ({videos}) => {
+import RelatedVideoCard from './RelatedVideoCard'
+
+const VideoHome = ({ id }) => {
+
   return (
-    <section>
-        {/* {
-            videos.map((item,index)=>{
-                return(
-                    <div key={index}>
-                        <VideoCard videoId={item?.id?.videoId}/>
-                    </div>
-                )
-            })
-        } */}
+    <section className='ml-28 mt-24 flex'>
+      <div className='w-2/3'>
+        <iframe src={`https://www.youtube.com/embed/${id}`} title="YouTube video player" frameBorder="0" allow="" allowFullScreen className='w-[900px] h-[500px] flex-1'></iframe>
+      </div>
+      <div className='h-1/3'>
+        <RelatedVideoCard />
+      </div>
     </section>
   )
 }
+
 
 export default VideoHome

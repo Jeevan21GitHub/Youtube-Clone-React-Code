@@ -8,6 +8,7 @@ import { signInWithPopup,signOut } from 'firebase/auth';
 import {auth,provider} from '../firebase';
 import { useSelector,useDispatch } from 'react-redux';
 import { setUser,getUser,logOut } from '../slices/userSlice';
+import { Link } from 'react-router-dom';
 
 const NavBar = ({setSideBarHidden,setSelectedCategory}) => {
     const [searchBox,setSearchBox]=useState('');
@@ -36,10 +37,12 @@ const NavBar = ({setSideBarHidden,setSelectedCategory}) => {
             <div className='flex flex-wrap items-center justify-between'>
                 <div className='flex items-center w-1/2 md:w-auto'>
                     <div className='p-2 rounded-full hover:bg-gray-800 cursor-pointer hidden md:flex'>
-                        <HiOutlineBars3 onClick={()=>setSideBarHidden((prev)=>!prev)} />
+                        <HiOutlineBars3 onClick={()=>{setSideBarHidden((prev)=>!prev);}} />
                     </div>
                     <div>
-                        <img src={Logo} alt='' className='w-20 md:w-24 object-fill cursor-pointer' />
+                        <Link to={'/'}>
+                            <img src={Logo} alt='' className='w-20 md:w-24 object-fill cursor-pointer' />
+                        </Link>
                     </div>
                 </div>
                 <div className='items-center hidden md:flex'>
