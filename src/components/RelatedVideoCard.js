@@ -18,7 +18,7 @@ const RelatedVideoCard = ({id}) => {
             .catch(err => {
                 console.log('Not fetch link on related video', err);
             })
-    }, [])
+    }, [id,relatedVideo])
     console.log("Related Video:" + relatedVideo);
     return (
         <div>
