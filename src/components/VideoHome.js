@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react'
-
 import RelatedVideoCard from './RelatedVideoCard'
 
 const VideoHome = ({ id }) => {

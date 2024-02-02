@@ -4,7 +4,7 @@ import { BASE_URL,API } from '../utils/fetchFromAPI';
 const RelatedVideoCard = () => {
     const [relatedVideo, setRelatedVideo] = useState([]);
     useEffect(() => {
-        fetch(`${BASE_URL}/search?key=${API}&part=snippet&maxResults=20&q=thalapathy`)
+        fetch(`${BASE_URL}/search?key=${API}&part=snippet&maxResults=20&q=${relatedVideo}`)
             .then((response) => response.json())
             .then((resJson) => {
                 if (resJson.items) {
@@ -25,12 +25,12 @@ const RelatedVideoCard = () => {
             <h1>RelatedVideoCard</h1>
             {
 
-                relatedVideo.map((item, inx) => {
+                relatedVideo.map((item, inx) => (
                     <div key={inx}>
 
                         <h3 className='font-semibold'>{item?.snippet?.title.length >= 30 ? item?.snippet?.title.substring(0, 30) : item?.snippet?.title}...</h3>
                     </div>
-                })
+                ))
             }
         </div>
     )
