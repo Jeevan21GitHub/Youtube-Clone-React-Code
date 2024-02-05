@@ -1,7 +1,7 @@
 
 
 const RelatedVideoLoadingCard = () => {
-    const dublicate = [1,2,3,4,5,6,7,8,9]
+    const dublicate = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     return (
         <section className='md:h-[calc(100vh-53px)] scrollbar overflow-y-auto scrollbar-hide mt-3'>
             {

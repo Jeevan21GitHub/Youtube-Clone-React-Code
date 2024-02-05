@@ -21,7 +21,7 @@ const SideBar = ({ selectedCategory, setSelectedCategory, setVideos }) => {
           </div>
         </div>
       </Link>
-      <div className='mb-4 pb-2 border-b border-gray-600'>
+      <div className='pb-2 mb-4 border-b border-gray-600'>
         {
           SideBarItems.Top.map((item, index) => {
             return (
@@ -39,7 +39,7 @@ const SideBar = ({ selectedCategory, setSelectedCategory, setVideos }) => {
           })
         }
       </div>
-      <div className='mb-4 pb-2 border-b border-gray-600'>
+      <div className='pb-2 mb-4 border-b border-gray-600'>
         {
           SideBarItems.Middle.map((item, index) => {
             return (
@@ -57,7 +57,7 @@ const SideBar = ({ selectedCategory, setSelectedCategory, setVideos }) => {
           })
         }
       </div>
-      <div className='mb-4 pb-2 border-b border-gray-600'>
+      <div className='pb-2 mb-4 border-b border-gray-600'>
         {
           SideBarItems.Explore.map((item, index) => {
             return (

@@ -15,7 +15,7 @@ const App = () => {
       <NavBar setSideBarHidden={setSideBarHidden}  setSelectedCategory={setSelectedCategory} />
       <Routes>
         <Route path='/' element={<Home sideBarHidden={sideBarHidden} setSideBarHidden={setSideBarHidden} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />} />
-        <Route path='/video/:id' element={<Video sideBarHidden={sideBarHidden} />} />
+        <Route path='/video/:id' element={<Video sideBarHidden={sideBarHidden} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}/>} />
         <Route />
         <Route path='*' element={<Navigate to='/' />} />
       </Routes>
